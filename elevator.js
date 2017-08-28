@@ -13,18 +13,20 @@ export class Elevator {
 
   }
 
+  traverseCount(p) {
+    let step1 = this.defaultFloor + p.currentFloor
+    let step2 = p.currentFloor - p.dropOffFloor
+    let step3 = step1 + step2
+
+    return step3
+  }
+
   goToFloor(person) {
     this.passengers.push(person)
     this.destination.push(person.dropOffFloor)
     this.currentFloor = person.dropOffFloor
-    this.floorsTraveresed = this.floorsTraveresed + (this.defaultFloor + person.currentFloor) + (person.currentFloor - person.dropOffFloor)
-
-
-    // this.stops = this.stops + 
-
-
+    this.floorsTraveresed = this.traverseCount(person)
   }
-
 }
 
 
