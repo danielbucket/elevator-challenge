@@ -40,7 +40,7 @@ describe('Elevator', function() {
     assert.equal(elevator.currentFloor, 5)
   });
 
-  it.only('07: should bring a rider to a floor below their current floor', () => {
+  it('07: should bring a rider to a floor below their current floor', () => {
     let mockUser = new Person('Chad', 8, 3)
 
     elevator.goToFloor(mockUser)
@@ -51,11 +51,8 @@ describe('Elevator', function() {
   })
 
 
-  it('10: ', () => {
+  xit('10: ', () => {
     let mockUser = new Person('Brad', 8, 2)
-
-
-
 
   })
 })
